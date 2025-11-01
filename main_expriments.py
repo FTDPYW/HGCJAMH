@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 from torch import optim
 from param import parameter_parser
-from Module import HGCLAMIR
+from Module import HGCJAMH
 from utils import get_L2reg, Myloss
 from Calculate_Metrics import Metric_fun
 from trainData import Dataset
@@ -134,7 +134,7 @@ def main(opt):
         hidden_list = [256, 256]
         num_proj_hidden = 64
 
-        model = HGCLAMIR(args.mi_num, args.dis_num, hidden_list, num_proj_hidden, args)
+        model = HGCJAMH(args.mi_num, args.dis_num, hidden_list, num_proj_hidden, args)
         model.to(device)
 
         optimizer = optim.AdamW(model.parameters(), lr=0.0001)
