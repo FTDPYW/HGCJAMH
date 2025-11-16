@@ -4,17 +4,17 @@ def parameter_parser():
 
     parser = argparse.ArgumentParser(description="Run Model.")
 
-    parser.add_argument('--data_path', type=str, default='./HMDD_data/circ_drug2',
-                        help='the number of miRANs.')
+    parser.add_argument('--data_path', type=str, default='./circ_drug2',
+                        help='the number of circRNAs.')
     parser.add_argument('--validation', type=int, default=5,
-                        help='the number of miRANs.')
+                        help='the number of validation.')
     parser.add_argument('--epoch', type=int, default=650,
                         help='the number of epoch.')
 
     parser.add_argument('--mi_num', type=int, default=271,
-                        help='the number of miRANs.')
+                        help='the number of circRNAs.')
     parser.add_argument('--dis_num', type=int, default=218,
-                        help='the number of diseases.')
+                        help='the number of drugs.')
 
     parser.add_argument('--alpha', type=int, default=0.055,
                         help='the size of alpha.')
